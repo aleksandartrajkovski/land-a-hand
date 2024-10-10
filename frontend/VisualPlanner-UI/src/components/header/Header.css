@@ -1,0 +1,130 @@
+/* Header container with slightly gray background */
+.header-container {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0; /* Slightly gray background */
+  padding: 20px;
+  border-radius: 0 0 5vw 5vw; /* Optional rounded corners */
+  align-items: center;
+}
+
+/* Navbar wrapper */
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Styling for Navbar inside the wrapper */
+.navbar-wrapper .navbar {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Title styling */
+.title {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Description styling */
+.description {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+}
+
+/* Explore button styling */
+.explore-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 30px;
+  background-color: #8ccc88;
+  border-radius: 30px;
+  border: none;
+  color: #ffffff;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.explore-button:hover {
+  transform: translateY(-5px);
+}
+
+/* Below Header Section */
+.logo-text-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.left-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.macedonia-logo {
+  width: 100px;
+  height: auto;
+}
+
+.right-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: left;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .explore-button {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
+  .logo-text-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-logo,
+  .right-text {
+    flex: none;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .macedonia-logo {
+    width: 80px;
+  }
+}

@@ -1,0 +1,277 @@
+/* Profile Details Container */
+.profile-details-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+/* Details Flex */
+.details-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Services List */
+.services-list {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 20px;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+/* Service Item */
+.service-item {
+  min-width: 200px;
+  max-width: 200px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.service-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button.edit,
+.button.edit-information,
+.button.logout {
+  width: fit-content;
+  margin: auto;
+}
+
+.button.edit {
+  background-color: #967bb6;
+  color: #fff;
+}
+
+.button.edit-information {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-color: #a8e1a0;
+  width: 25%;
+}
+
+.button.logout {
+  margin-top: 10px;
+  background-color: #f44336;
+  color: #fff;
+  width: 25%;
+}
+
+.button.delete {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.button.add-service {
+  padding: 8px 16px;
+  border: 2px solid #967bb6;
+  color: #967bb6;
+  border-radius: 4px;
+  background: none;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Requests Table */
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.requests-table th,
+.requests-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.requests-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem; /* Bigger size for better visibility */
+  color: rgba(255, 255, 255, 0.7); /* Semi-transparent white color */
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s ease; /* Smooth transition */
+}
+
+.arrow-left {
+  left: 10px; /* Positioned slightly away from the left */
+}
+
+.arrow-right {
+  right: 10px; /* Positioned slightly away from the right */
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}
+
+.requests-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.requests-table tr:hover {
+  background-color: #ddd;
+}
+
+.requests-table td button {
+  margin-right: 5px;
+}
+
+.requests-table td .accept {
+  background-color: #4caf50;
+  color: white;
+}
+
+.requests-table td .decline {
+  background-color: #f44336;
+  color: white;
+}
+
+.user-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.status-pending {
+  background-color: #f5ec99;
+}
+
+.status-accepted {
+  background-color: #8eeb91;
+  color: white;
+}
+
+.status-declined {
+  background-color: #fa8c84;
+  color: white;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .profile-details-container {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .profile-header img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .services-list {
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: visible;
+  }
+
+  .service-item {
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .button.edit-information,
+  .button.logout {
+    width: 100%;
+  }
+
+  .requests-section {
+    margin-bottom: 20px;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    font-size: 1.5rem;
+  }
+}
+.status-pending {
+  color: orange;
+}
+
+.status-accepted {
+  color: green;
+}
+
+.status-denied {
+  color: red;
+}

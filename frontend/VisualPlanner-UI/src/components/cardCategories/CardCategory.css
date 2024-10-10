@@ -1,0 +1,137 @@
+/* General Card Styles */
+.card {
+  width: 180px;
+  height: 240px; /* Adjusted height for better image-text balance */
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.card img {
+  width: 100px; /* Image fits properly within the card */
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover; /* Ensures the image scales correctly without distortion */
+}
+
+/* Category Name Styling */
+.category-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 10px;
+}
+
+/* Container for the Card Layout */
+.custom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Row Layout for the Cards */
+.custom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Column for each Card */
+.custom-col {
+  flex: 0 0 calc(33.33% - 40px); /* 3 cards per row on larger screens */
+  margin: 20px;
+  max-width: calc(33.33% - 40px);
+}
+
+/* View All Button */
+.view-all-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.view-all-button {
+  margin-top: 20px;
+  background-color: #333333;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 12px 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: #686565;
+  color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .custom-col {
+    flex: 0 0 100%; /* Cards take up full width */
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .view-all-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .card img {
+    width: 80px; /* Smaller image size for mobile */
+    height: 80px;
+  }
+
+  .category-name {
+    font-size: 16px;
+  }
+}
+
+/* Extra Small Devices (Phones) */
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 10px;
+  }
+
+  .view-all-button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  .category-name {
+    font-size: 14px;
+  }
+
+  .card img {
+    width: 70px; /* Further reduce image size on very small screens */
+    height: 70px;
+  }
+}

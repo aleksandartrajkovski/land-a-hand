@@ -1,0 +1,159 @@
+/* Navbar container styling */
+.navbar-small {
+    background-color: #f0f0f0; /* Slightly gray background */
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo styling */
+.nav-logo-small img {
+    width: auto;
+    height: 60px; /* Set a consistent height for the logo */
+    max-width: 150px;
+}
+
+/* Hamburger menu icon */
+.nav-icon-small {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+/* Navigation links (desktop view) */
+.nav-links-small {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Individual navigation link styling */
+.nav-link-small {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.3s all;
+    position: relative;
+}
+
+/* Add underline effect on hover */
+.nav-link-small::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #350A56;
+    transition: width 0.3s ease;
+    bottom: -5px;
+}
+
+.nav-link-small:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+.nav-link-small:hover {
+    color: #350A56;
+}
+
+/* Responsive collapsible menu */
+.nav-links-small.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+}
+
+.nav-item-small {
+    margin-right: 15px;
+}
+
+.nav-item-small:last-child {
+    margin-right: 0;
+}
+
+/* Logout button styling */
+.logout-btn-small button {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    border-radius: 25px;
+}
+
+.logout-btn-small button:hover {
+    background-color: #350A56; /* Background changes on hover */
+    color: white;
+    border-color: #350A56;
+}
+
+/* Aligning the icons with the text */
+.nav-buttons img {
+    margin-left: 10px;
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 950px) {
+    .nav-links-small {
+        display: none;
+    }
+
+    .nav-links-small.active {
+        display: flex;
+    }
+
+    .nav-icon-small {
+        display: block;
+    }
+
+    .navbar-small {
+        justify-content: space-between;
+    }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .logout-btn-small button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .nav-link-small {
+        font-size: 1rem;
+    }
+
+    .nav-logo-small img {
+        height: 50px;
+    }
+
+    .nav-buttons img {
+        height: 35px;
+    }
+}
